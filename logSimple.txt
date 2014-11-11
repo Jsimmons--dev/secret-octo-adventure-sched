@@ -1,0 +1,238 @@
+Arrival Queue: 
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+
+
+----------------
+
+-------------------------------------
+[---- Clock Cycle: 1 ----]
+
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 2 ----]
+
+-Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+ -has arrived
+
+-Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+ -has entered CPU
+
+
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 3 ----]
+
+CPU Burst left: 3 
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 3 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 4 ----]
+
+CPU Burst left: 2 
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 5 ----]
+
+CPU Burst left: 1 
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 6 ----]
+
+CPU Burst left: 0 
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 0 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 7 ----]
+
+Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 2 ]
+ -has been put to sleep
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 2 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 8 ----]
+
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 0 2 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 9 ----]
+
+
+-Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+ has been awoken
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 10 ----]
+
+-Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+ -has entered CPU
+
+
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 11 ----]
+
+CPU Burst left: 1 
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 12 ----]
+
+CPU Burst left: 0 
+
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 0 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 13 ----]
+
+Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: ]
+ -has finished
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: ]
+
+
+-----------------
+Scheduler Status: 
+done
