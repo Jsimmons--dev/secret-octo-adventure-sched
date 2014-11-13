@@ -8,6 +8,10 @@ Arrival Queue:
 [---- Clock Cycle: 1 ----]
 
 
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
+
 
 
 ---CPU contents *NULL*
@@ -27,6 +31,10 @@ empty
 -Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
  -has arrived
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 -Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
  -has entered CPU
 
@@ -46,6 +54,105 @@ empty
 -------------------------------------
 [---- Clock Cycle: 3 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 5
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 4 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 4
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 5 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 3
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 6 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 2
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 7 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 1
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 4 2 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 8 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 CPU Burst left: 3 
 
 
@@ -60,8 +167,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 4 ----]
+[---- Clock Cycle: 9 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 CPU Burst left: 2 
 
 
@@ -76,8 +187,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 5 ----]
+[---- Clock Cycle: 10 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 CPU Burst left: 1 
 
 
@@ -92,8 +207,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 6 ----]
+[---- Clock Cycle: 11 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 CPU Burst left: 0 
 
 
@@ -108,8 +227,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 7 ----]
+[---- Clock Cycle: 12 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 2 ]
  -has been put to sleep
 
@@ -127,8 +250,112 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 8 ----]
+[---- Clock Cycle: 13 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 5
+switching...
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 2 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 14 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 4
+switching...
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 2 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 15 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 3
+switching...
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 2 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 16 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 2
+switching...
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 2 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 17 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 1
+switching...
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 1 2 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 18 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 
 
 
@@ -144,8 +371,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 9 ----]
+[---- Clock Cycle: 19 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 
 -Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
  has been awoken
@@ -164,8 +395,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 10 ----]
+[---- Clock Cycle: 20 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 -Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
  -has entered CPU
 
@@ -183,8 +418,107 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 11 ----]
+[---- Clock Cycle: 21 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 5
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 22 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 4
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 23 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 3
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 24 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 2
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 25 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 1
+switching...
+
+---CPU contents[ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 26 ----]
+
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 CPU Burst left: 1 
 
 
@@ -199,8 +533,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 12 ----]
+[---- Clock Cycle: 27 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 CPU Burst left: 0 
 
 
@@ -215,8 +553,12 @@ empty
 empty
 
 -------------------------------------
-[---- Clock Cycle: 13 ----]
+[---- Clock Cycle: 28 ----]
 
+
+QUANTUM ELAPSED: 0
+
+CONTEXT ELAPSED: 0
 Process [ Process: -Arrival Time: 2 -NumOfBursts: 2 -BurstQ: ]
  -has finished
 

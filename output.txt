@@ -1,0 +1,3228 @@
+Arrival Queue: 
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: 1 ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+
+----------------
+
+-------------------------------------
+[---- Clock Cycle: 1 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: 1 ]
+ -has arrived @time:1
+-Process [ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: 1 ]
+ -has entered CPU @time: 1
+
+
+
+---CPU contents[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: 1 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 2 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: 0 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+empty
+
+-------------------------------------
+[---- Clock Cycle: 3 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+ -has finished @time: 3
+with TaT:2 WaitTime:0 I/O Wait:0 ResponseTime:0
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 4 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+
+
+---CPU contents *NULL*
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 5 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+ -has arrived @time:5
+-Process [ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+ -has entered CPU @time: 5
+
+
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 100 5 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 6 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+ -has arrived @time:6
+CPU Burst left: 4 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 4 100 5 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 7 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 3 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 3 100 5 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 8 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+ -has arrived @time:8
+CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 2 100 5 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 9 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+ -has arrived @time:9
+CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 1 100 5 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 10 ----]
+
+QUANTUM ELAPSED: 96
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 0 100 5 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 11 ----]
+
+QUANTUM ELAPSED: 95
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+ -has been put to sleep @time: 11
+
+-Process [ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+ -has entered CPU @time: 11
+
+
+
+---CPU contents[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 5 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 12 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 4 
+
+---CPU contents[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 4 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 13 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 3 
+
+---CPU contents[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 14 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 2 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+
+---ArrivalQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 15 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+ -has arrived @time:15
+111CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 1 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 16 ----]
+
+QUANTUM ELAPSED: 96
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: 0 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 17 ----]
+
+QUANTUM ELAPSED: 95
+
+CONTEXT ELAPSED: 0
+111-Process [ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+ -has finished @time: 17
+with TaT:11 WaitTime:5 I/O Wait:0 ResponseTime:5
+
+-Process [ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+ -has entered CPU @time: 17
+
+
+
+---CPU contents[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 4 2 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 18 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 0 4 2 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 19 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+111-Process [ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+ -has been put to sleep @time: 19
+
+-Process [ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+ -has entered CPU @time: 19
+
+
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 5 3 4 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 20 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 3 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 5 3 4 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 21 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 2 5 3 4 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 22 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 1 5 3 4 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 23 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 0 5 3 4 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 24 ----]
+
+QUANTUM ELAPSED: 96
+
+CONTEXT ELAPSED: 0
+111-Process [ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+ -has been put to sleep @time: 24
+
+-Process [ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+ -has entered CPU @time: 24
+
+
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 1 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 25 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 2 1 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 26 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 1 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 27 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+111CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 0 1 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 28 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+111-Process [ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+ -has been put to sleep @time: 28
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 29 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 30 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 31 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 32 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 33 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 34 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 35 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 36 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 37 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 38 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 39 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 40 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 41 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 42 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 43 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 44 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 45 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 46 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 47 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 48 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 49 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 50 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 51 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 52 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 53 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 54 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 55 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 56 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 57 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 58 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 59 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 60 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 61 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 62 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 63 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 64 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 65 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 66 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 67 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 68 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 69 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 70 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 71 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 72 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 73 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 74 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 75 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 76 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 77 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 78 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 79 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 80 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 81 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 82 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 83 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 84 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 85 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 86 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 87 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 88 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 89 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 90 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 91 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 92 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 93 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 94 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 95 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 96 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 97 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 98 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 99 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 100 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 101 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 102 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 103 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 104 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 105 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 106 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 107 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 108 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 109 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 110 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111
+
+---CPU contents *NULL*
+---WaitQ contents
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 100 5 ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 4 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 5 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 111 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+111-Process [ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 ]
+ -has entered CPU @time: 111
+
+
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 5 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 112 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 4 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 4 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 113 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 3 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 3 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 114 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 115 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 1 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 116 ----]
+
+QUANTUM ELAPSED: 96
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: 0 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 117 ----]
+
+QUANTUM ELAPSED: 95
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+ -has finished @time: 117
+with TaT:112 WaitTime:100 I/O Wait:0 ResponseTime:0
+
+-Process [ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+ -has entered CPU @time: 117
+
+
+
+---CPU contents[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 118 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 1 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 119 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: 0 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 120 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+ -has finished @time: 120
+with TaT:112 WaitTime:107 I/O Wait:0 ResponseTime:9
+
+-Process [ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+ -has entered CPU @time: 120
+
+
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 4 3 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 121 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 2 4 3 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 122 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 1 4 3 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 123 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 0 4 3 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 124 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 3 ]
+ -has been put to sleep @time: 124
+
+-Process [ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+ -has entered CPU @time: 124
+
+
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 3 ]
+---WaitQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 125 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+128CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 2 ]
+---WaitQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 126 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+128CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 1 ]
+---WaitQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 127 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+128CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: 0 ]
+---WaitQ contents
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 4 3 ]
+
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 128 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+128-Process [ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: ]
+ -has finished @time: 128
+with TaT:113 WaitTime:105 I/O Wait:0 ResponseTime:9
+
+-Process [ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 ]
+ -has entered CPU @time: 128
+
+
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 3 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 129 ----]
+
+QUANTUM ELAPSED: 100
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 2 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 2 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 130 ----]
+
+QUANTUM ELAPSED: 99
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 1 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 1 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 131 ----]
+
+QUANTUM ELAPSED: 98
+
+CONTEXT ELAPSED: 0
+CPU Burst left: 0 
+
+---CPU contents[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: 0 ]
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: ]
+
+
+-------------------------------------
+[---- Clock Cycle: 132 ----]
+
+QUANTUM ELAPSED: 97
+
+CONTEXT ELAPSED: 0
+-Process [ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: ]
+ -has finished @time: 132
+with TaT:123 WaitTime:110 I/O Wait:0 ResponseTime:10
+
+
+
+---CPU contents *NULL*
+---WaitQ contents
+empty
+---ReadyQ contents
+empty
+---ArrivalQ contents
+empty
+--DoneQ contents
+[ Process: -Arrival Time: 1 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 6 -NumOfBursts: 1 -BurstQ: ]
+[ Process: -Arrival Time: 5 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 8 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 15 -NumOfBursts: 2 -BurstQ: ]
+[ Process: -Arrival Time: 9 -NumOfBursts: 3 -BurstQ: ]
+
+
+-----------------
+Scheduler Status: 
+
+[ CPU Utilization: 34.85% ]
+[ Average Turn Around Time: 78 ]
+[ Maximum Turn Around Time: 123 ]
+[ Average Wait Time: 71 ]
+[ Maximum Wait Time: 110 ]
+[ Average Response Time: 5 ]
+[ Maximum Response Time: 10 ]
+done!

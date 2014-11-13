@@ -3,12 +3,26 @@
 #include <string.h>
 
 static int preempt = 0;
-
+static int debug = 0;
+int CPUutil = 0;
 typedef struct BNode
 {
  int burst;
  struct BNode *next;
 } BNode;
+
+BNode *newBNode()
+{
+ BNode *newBNode = malloc(sizeof(BNode));
+ if(newBNode == NULL)
+  {
+   printf("no memory allocated for new Burst Node\n");
+   exit(-2);
+  }
+  newBNode->burst = 0;
+  newBNode->next = NULL;
+  return newBNode;
+}
 
 typedef struct BurstQ
 {
@@ -17,11 +31,28 @@ typedef struct BurstQ
  struct BNode *tail;
 } BurstQ;
 
+BurstQ *newBurstQ()
+{
+ BurstQ *newBurstQ = malloc(sizeof(BurstQ));
+ if(newBurstQ == NULL)
+  {
+   printf("no memory allocated for new burst queue\n");
+   exit(-2);
+  }
+  newBurstQ->size = 0;
+ return newBurstQ;
+}
+
 typedef struct Process
 {
+ int pid;
  int ArrivalTime;
  int numOfBursts;
  BurstQ *burstQ;
+
+ int whenToWake;
+ int timeOnCPU;
+ int FirstOn;
 
  int TurnAroundTime;
  int WaitTime;
@@ -29,11 +60,46 @@ typedef struct Process
  int responseTime;
 } Process;
 
+Process *newProcess()
+{
+ Process *newProcess = malloc(sizeof(Process));
+ if(newProcess == NULL)
+  {
+   printf("no new memory allocated for new process\n");
+   exit(-2);
+  }
+ newProcess->pid = 0;
+ newProcess->ArrivalTime = 0;
+ newProcess->numOfBursts = 0;
+ newProcess->burstQ = newBurstQ();
+ newProcess->timeOnCPU = 0;
+ newProcess->FirstOn = -1;
+ newProcess->whenToWake = 0;
+ newProcess->TurnAroundTime = 0;
+ newProcess->WaitTime = 0;
+ newProcess->sleepTime = 0;
+ newProcess->responseTime = 0;
+ return newProcess;
+}
+
 typedef struct QNode
 {
  Process *process;
  struct QNode *next;
-} Qnode;
+} QNode;
+
+QNode *newQNode()
+{
+ QNode *newQNode = malloc(sizeof(QNode));
+ if(newQNode == NULL)
+  {
+   printf("no memory allocated for new queue node\n");
+   exit(-2);
+  }
+  newQNode->process = newProcess();
+  newQNode->next = NULL;
+  return newQNode;
+}
 
 typedef struct Q
 {
@@ -42,9 +108,24 @@ typedef struct Q
  struct QNode *tail;
 } Q;
 
+Q *newQ()
+{
+ Q *newQ = malloc(sizeof(Q));
+ if(newQ == NULL)
+  {
+   printf("no memory allocated for new queue");
+   exit(-2);
+  }
+  newQ->size = 0;
+  newQ->head = NULL;
+  newQ->tail = NULL;
+  return newQ;
+}
+
 int BQpush(int newInt,BurstQ *toQ)
 {
- struct BNode *newNode = malloc(sizeof(struct BNode));
+
+ struct BNode *newNode = newBNode();
  newNode->burst = newInt;
  if(toQ->size == 0)
   {
@@ -112,20 +193,16 @@ Process *Qremove(int i,Q *q)
   {
    return NULL;
   }
-  else if(q->size == 1)
-  {
-   return Qpop(q);
-  }
-  else
+ else
    {
   if(i == 0)
   {
    return Qpop(q);
   }
-  if(i < q->size-1)
+  if(i < q->size)
    {
     struct QNode *cur = q->head;
-    for(int j = 0; j<i-2;j++)
+    for(int j = 0; j<i-1;j++)
     {
      cur = cur->next;
     }
@@ -144,7 +221,7 @@ Process *Qremove(int i,Q *q)
 
 int Qpush(Process *newProcess,Q *toQ)
 {
- struct QNode *newNode = malloc(sizeof(struct QNode));
+ QNode *newNode = newQNode();
  newNode->process = newProcess;
  if(toQ->size == 0)
   {
@@ -161,21 +238,72 @@ int Qpush(Process *newProcess,Q *toQ)
 }
 
 
+void Qinsert(Process *CPU,Q *q)
+{
+ QNode *newNode,*left,*right;
+ newNode = newQNode();
+ newNode->process = CPU;
+
+ left = right = q->head;
+
+if(left == NULL)
+ {
+  Qpush(CPU,q);
+  return;
+ }
+ right = left->next;
+ if(right == NULL)
+  {
+   if(left->process->burstQ->head->burst <= CPU->burstQ->head->burst)
+    {
+     newNode->next = left;
+     q->head = newNode;
+     return;
+    }
+Qpush(CPU,q);
+return;
+  }
+  while(right->process->burstQ->head->burst <= CPU->burstQ->head->burst)
+   {
+    left = right;
+    right = right->next;
+    if(right == NULL)
+     {
+      Qpush(CPU,q);
+      return;
+     }
+     if(right->process->burstQ->head->burst > CPU->burstQ->head->burst)
+      {
+       left->next = newNode;
+       newNode->next = right;
+       return;
+      }
+   }
+}
+
 
 void printProcessStatus(Process *process)
 
 {
  if(process != NULL)
   {
- printf("[ Process: -Arrival Time: %d -NumOfBursts: %d -BurstQ: ",process->ArrivalTime,process->numOfBursts);
- BNode *cur = process->burstQ->head;
- for(int i = 0;i<process->burstQ->size;i++)
+   if(debug == 1)
+    {
+     printf("[ Process: -Arrival Time: %d -NumOfBursts: %d -BurstQ: ",process->ArrivalTime,process->numOfBursts);
+
+     BNode *cur = process->burstQ->head;
+     for(int i = 0;i<process->burstQ->size;i++)
+      {
+       printf("%d ",(cur->burst));
+       cur = cur->next;
+      }
+      printf("]\n");
+    }
+  else
   {
-   printf("%d ",(cur->burst));
-   cur = cur->next;
+   printf("P: %d ",process->pid);
   }
- printf("]\n");
-}
+ }
 else
  {
   printf(" *NULL*\n");
@@ -205,20 +333,23 @@ int printQ(Q *q)
 
 }
 
-void parseInput(char filename[],Q *arrivalQ)
+int parseInput(char filename[],Q *arrivalQ)
 {
  char *token;
  FILE *file = fopen (filename,"r");
  if (file != NULL)
   {
    char line[128];
-
+   int pid = 0;
    while(fgets(line,sizeof(line),file) != NULL)
     {
-     Process *process = malloc(sizeof(struct Process));
-     BurstQ *burstQ = malloc(sizeof(struct BurstQ));
+     Process *process = newProcess();
+     process->pid = pid;
+     pid++;
+     BurstQ *burstQ = newBurstQ();
      process->burstQ = burstQ;
      token = strtok(line," ");
+
      process->ArrivalTime = atoi(token);
      token = strtok(NULL," ");
      process->numOfBursts = atoi(token);
@@ -228,10 +359,12 @@ void parseInput(char filename[],Q *arrivalQ)
        BQpush(atoi(token),process->burstQ);
        token = strtok(NULL," ");
       }
-     Qpush(process,arrivalQ);
+      Qpush(process,arrivalQ);
     }
     fclose(file);
+    return 0;
   }
+  return -1;
 }
 
 int arrive(int clockTick,Q *arrivalQ,Q *readyQ)
@@ -247,7 +380,7 @@ int arrive(int clockTick,Q *arrivalQ,Q *readyQ)
     Process *pop = Qpop(arrivalQ);
     printf("-Process ");
     printProcessStatus(pop);
-    printf(" -has arrived\n\n");
+    printf(" -has arrived @time:%d\n",clockTick);
     Qpush(pop,readyQ);
     curNode = arrivalQ->head;
    }
@@ -261,38 +394,20 @@ int arrive(int clockTick,Q *arrivalQ,Q *readyQ)
  return -1;
 }
 
-
 Process *schedule(Q *readyQ)
 {
- if(readyQ->size != 0)
-  {
    return Qpop(readyQ);
-  }
-  return NULL;
 }
 
-int CPUtick(Process *CPU,int currentQuantum,int quantumMax)
+int CPUtick(Process *CPU,int currentQuantum)
 {
  //if nothing is on there dont do anything
  if(CPU == NULL)
   {
-   return 0;
+   return -1;
   }
-
-  //if the scheduler is preemptive
- if(preempt == 1)
-  {
-   //if the quantum has hit 0
-  if(currentQuantum-- == 0)
-   {
-    //reset quantum and return that the process should be preempted
-    currentQuantum = quantumMax;
-    return 2;
-   }
-  }
-
-  //else if you dont preempt
-  //if the burst hits 0
+ if(currentQuantum == 0 && preempt == 1) return 2;
+ CPU->timeOnCPU++;
  if(CPU->burstQ->head->burst-- == 0)
   {
    //pop the burst node
@@ -309,43 +424,51 @@ int CPUtick(Process *CPU,int currentQuantum,int quantumMax)
      return 3;
     }
   }
+  if(debug == 1)
+   {
   printf("CPU Burst left: %d ",CPU->burstQ->head->burst);
+  }
   //and keep going
   return 0;
 }
 
-int transferCPU(Process *CPU,int CPUstatus,Q *doneQ,Q *readyQ,Q *waitQ)
+int transferCPU(Process *CPU,int CPUstatus,Q *doneQ,Q *readyQ,Q *waitQ,int clockTick)
 {
  switch(CPUstatus)
  {
+
   case 0:
   return 0;
   break;
 
   case 1:
-  printf("Process ");
+  printf("-Process ");
   printProcessStatus(CPU);
-  printf(" -has finished\n");
+  printf(" -has finished @time: ");
+  printf("%d\n",clockTick);
+  CPU->TurnAroundTime = clockTick - CPU->ArrivalTime;
+  CPU->WaitTime = CPU->TurnAroundTime - CPU->timeOnCPU - CPU->sleepTime;
+  CPU->responseTime = CPU->FirstOn - CPU->ArrivalTime;
+  printf("with TaT:%d WaitTime:%d I/O Wait:%d ResponseTime:%d\n\n",CPU->TurnAroundTime,CPU->WaitTime,CPU->sleepTime,CPU->responseTime);
   Qpush(CPU,doneQ);
-  CPU = NULL;
   return 1;
   break;
 
   case 2:
-  printf("Process ");
+  printf("-Process ");
   printProcessStatus(CPU);
-  printf(" -has been returned to readyQ\n");
-  Qpush(CPU,readyQ);
-  CPU = NULL;
+printf(" -has returned to the ready queue @time: ");
+printf("%d\n\n",clockTick);  Qpush(CPU,readyQ);
   return 2;
   break;
 
   case 3:
-  printf("Process ");
+  printf("-Process ");
   printProcessStatus(CPU);
-  printf(" -has been put to sleep\n");
-  Qpush(CPU,waitQ);
-  CPU = NULL;
+  CPU->whenToWake = clockTick + CPU->burstQ->head->burst;
+  printf(" -has been put to sleep @time: ");
+  printf("%d\n\n",clockTick);
+  Qinsert(CPU,waitQ);
   return 3;
   break;
 
@@ -357,14 +480,17 @@ int transferCPU(Process *CPU,int CPUstatus,Q *doneQ,Q *readyQ,Q *waitQ)
 
 Q *waitQtick(Q *waitQ)
 {
- Q *returnQ = malloc(sizeof(struct Q));
+ Q *returnQ = newQ();
  struct QNode *cur = waitQ->head;
+
  for(int i = 0;i<waitQ->size;i++)
   {
+   cur->process->sleepTime++;
    if(cur->process->burstQ->head->burst-- == 0)
     {
      BQpop(cur->process->burstQ);
-     Qpush(Qremove(i,waitQ),returnQ);
+     Process *removed = Qremove(i,waitQ);
+     Qpush(removed,returnQ);
      i--;
      continue;
     }
@@ -373,121 +499,235 @@ Q *waitQtick(Q *waitQ)
  return returnQ;
 }
 
-void wake(Q *toReadyQ,Q *waitQ)
+void wake(Q *toReadyQ,Q *readyQ,int clockTick)
 {
  for(int i = 0;i<toReadyQ->size;i++)
   {
    Process *wake = Qpop(toReadyQ);
-   Qpush(wake,waitQ);
+   Qpush(wake,readyQ);
    printf("-Process ");
    printProcessStatus(wake);
-   printf(" has been awoken\n\n");
+   printf(" has been awoken @time: ");
+   printf("%d\n\n",clockTick);
    fflush(stdout);
   }
 }
 
-void printQfinal(Q *doneQ)
+void wakeUp(Q *waitQ,Q *readyQ,int clockTick)
 {
- printf("done");
+ for(int i = 0;i<waitQ->size;i++)
+  {
+   Qpush(Qpop(waitQ),readyQ);
+  }
+ // if(waitQ->size > 0)
+ //  {
+ //   QNode *cur = waitQ->head;
+ //   while(waitQ->head->process->whenToWake <= clockTick)
+ //   {
+ //    BQpop(waitQ->head->process->burstQ);
+ //    Qpush(Qpop(waitQ),readyQ);
+ //    if(waitQ->size == 0)
+ //     {
+ //      return;
+ //     }
+ //   }
+ // }
+}
+
+void printQfinal(Q *doneQ,int clockTick)
+{
+
+ int avgTaT = 0;
+ int maxTaT = 0;
+ int avgWait = 0;
+ int maxWait = 0;
+ int avgRes = 0;
+ int maxRes = 0;
+
+ QNode *curNode = doneQ->head;
+ for(int i = 0;i<doneQ->size;i++)
+  {
+   Process *curP = curNode->process;
+   int curTaT = curP->TurnAroundTime;
+   int curWait = curP->WaitTime;
+   int curRes = curP->responseTime;
+   avgTaT += curTaT;
+   avgWait += curWait;
+   avgRes += curRes;
+   if(curTaT > maxTaT)
+    maxTaT = curTaT;
+   if(curWait > maxWait)
+    maxWait = curWait;
+   if(curRes > maxRes)
+    maxRes = curRes;
+   curNode = curNode->next;
+  }
+  avgTaT /= doneQ->size;
+  avgWait /= doneQ->size;
+  avgRes /= doneQ->size;
+
+ printf("\n[ CPU Utilization: %.2f%% ]\n",((float)CPUutil/(float)clockTick)*100);
+ printf("[ Average Turn Around Time: %d ]\n",avgTaT);
+ printf("[ Maximum Turn Around Time: %d ]\n",maxTaT);
+ printf("[ Average Wait Time: %d ]\n",avgWait);
+ printf("[ Maximum Wait Time: %d ]\n",maxWait);
+ printf("[ Average Response Time: %d ]\n",avgRes);
+ printf("[ Maximum Response Time: %d ]\n",maxRes);
+ printf("done!");
+}
+
+void printAll(Process *CPU,Q *waitQ,Q*readyQ,Q *arrivalQ,Q *doneQ)
+{
+printf("\n\n---CPU contents");
+printProcessStatus(CPU);
+printf("---WaitQ contents\n");
+printQ(waitQ);
+printf("---ReadyQ contents\n");
+printQ(readyQ);
+printf("---ArrivalQ contents\n");
+printQ(arrivalQ);
+printf("--DoneQ contents\n");
+printQ(doneQ);
 }
 
 int main( int argc,char *argv[])
 {
- if(argc != 2 && argc != 3)
-  {
-   printf("usage:\n");
-   return 0;
-  }
-  int quantum;
-  Q *arrivalQ = malloc(sizeof(struct Q));
-  Q *readyQ = malloc(sizeof(struct Q));
-  Q *doneQ = malloc(sizeof(struct Q));
-  Q *waitQ = malloc(sizeof(struct Q));
-  Process *CPU = NULL;
 
-  if(argc == 2)
+ int quantum = 0;
+ int contextSwitchHalf = 0;
+ Q *arrivalQ = newQ();
+ Q *readyQ = newQ();
+ Q *doneQ = newQ();
+ Q *waitQ = newQ();
+
+ Process *CPU = NULL;
+
+
+ if(argc != 4 && argc != 5)
+  {
+   printf("usage: sched [filename] [scheduler] [quantum] [context switch cost / 2]\n");
+   exit(0);
+  }
+  if(strcmp(argv[2],"FCFS") != 0)
+   {
+    printf("Scheduler was not one of -FCFS\n");
+    exit(0);
+   }
+
+
+  if(argc == 4)
    {
     preempt = 0;
     quantum = 0;
-    parseInput(argv[1],arrivalQ);
+    contextSwitchHalf = atoi(argv[3]);
    }
    else
    {
     preempt = 1;
-    int quantum = atoi(argv[1]);
-    parseInput(argv[2],arrivalQ);
+    quantum = atoi(argv[3]);
+    contextSwitchHalf = atoi(argv[4]);
    }
+   int parseStatus = parseInput(argv[1],arrivalQ);
+     if(parseStatus == -1)
+      {
+       printf("file not found. exiting...\n");
+       exit(-1);
+      }
 
+{ //debug print
+ if(debug == 1)
+ {
  printf("Arrival Queue: \n");
  printQ(arrivalQ);
  printf("\n----------------\n");
+ }
+}
 
- int clockTick = 0;
  int totalJobs = arrivalQ->size;
  int currentQuantum = quantum;
 
-
- while(doneQ->size != totalJobs)
+ int clockTick = 0;
+ int contextCost = 0;
+ int CPUstatus = -1;
+ while(doneQ->size < totalJobs-1)
   {
    clockTick++;
-   printf("\n-------------------------------------\n");
-   printf("[---- Clock Cycle: %d ----]\n\n",clockTick);
-   arrive(clockTick,arrivalQ,readyQ);
-   int CPUstatus;
-   if(CPU != NULL)
-    {
-     //cycle the cpu and return the CPU status
-     printf("\nQUANTUM ELAPSED: %d\n",currentQuantum);
-     CPUstatus = CPUtick(CPU,currentQuantum,quantum);
-     transferCPU(CPU,CPUstatus,doneQ,readyQ,waitQ);
-     if(CPUstatus != 0)
-      {
-       CPU = NULL;
-      }
-    }
-   else
-    {
-     if(readyQ->size != 0)
-     {
-     CPU  = schedule(readyQ);
-     printf("-Process ");
-     printProcessStatus(CPU);
-     printf(" -has entered CPU\n\n");
-     fflush(stdout);
-    }
-    }
-    printf("\n");
-    Q *toReadyQ = waitQtick(waitQ);
-    wake(toReadyQ,readyQ);
 
-    printf("\n\n---CPU contents");
-    printProcessStatus(CPU);
-    printf("---WaitQ contents\n");
-    printQ(waitQ);
-    printf("---ReadyQ contents\n");
-    printQ(readyQ);
-    printf("---ArrivalQ contents\n");
-    printQ(arrivalQ);
-    printf("--DoneQ contents\n");
-    printQ(doneQ);
+   if(debug == 1)
+   {
+    printf("\n-------------------------------------\n");
+    printf("[---- Clock Cycle: %d ----]\n",clockTick);
+    printf("\nQUANTUM ELAPSED: %d\n",currentQuantum);
+    printf("\nCONTEXT ELAPSED: %d\n",contextCost);
+   }
+
+   //get new arrivals
+  arrive(clockTick,arrivalQ,readyQ);
+
+  //wake up any ready processes
+  //Q *toReadyQ = waitQtick(waitQ);
+  //wake(toReadyQ,readyQ,clockTick);
+  wakeUp(waitQ,readyQ,clockTick);
+
+   //if we're switching just loop
+   if(contextCost != 0)
+    {
+     printf("switching...\n\n");
+     contextCost--;
+     continue;
+    }
+
+
+     //there isnt anything on the CPU
+     if(CPU == NULL)
+      {
+
+      if(readyQ->size != 0)
+       {
+      CPU  = schedule(readyQ);
+      printf("-Process ");
+      printProcessStatus(CPU);
+      if(CPU->FirstOn == -1)
+      CPU->FirstOn = clockTick;
+      printf(" -has entered CPU @time: ");
+      printf("%d\n\n",clockTick);
+      fflush(stdout);
+      contextCost += contextSwitchHalf;
+     }
+    }
+     else
+      {
+      //cycle the cpu and return the CPU status
+      CPUstatus = CPUtick(CPU,currentQuantum);
+      CPUutil++;
+      transferCPU(CPU,CPUstatus,doneQ,readyQ,waitQ,clockTick);
+    //if the current process is not staying on the CPU
+    if(CPUstatus != 0)
+     {
+      //empty the CPU
+      CPU = NULL;
+      currentQuantum = quantum;
+      //if the move incurs a context switch cost
+      if(CPUstatus == 2 || CPUstatus == 3)
+      contextCost += contextSwitchHalf;
+     }
+     else
+      {
+       currentQuantum--;
+      }
+     }
+
+
+
+
+{ // debug print
+    if(debug == 1)
+    {
+     printAll(CPU,waitQ,readyQ,arrivalQ,doneQ);
+   }
+  }
   }
   printf("\n-----------------\nScheduler Status: \n");
-  printQfinal(doneQ);
+  printQfinal(doneQ,clockTick);
   printf("\n");
 }
-// int main()
-// {
-//     parseFile();
-//     int clockTick = 0;
-//     int quantum = 0;
-//     while(ProcessInQueue)
-//      {
-//       if(quantumIsUp)
-//        {
-//         premptRunningProcess();
-//         quantum = 0;
-//        }
-//       clockTick++;
-//       quantum++;
-//      }
-// }
