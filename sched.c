@@ -5,6 +5,7 @@
 static int preempt = 0;
 static int debug = 0;
 int CPUutil = 0;
+
 typedef struct BNode
 {
  int burst;
